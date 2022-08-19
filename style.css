@@ -6,18 +6,47 @@ body {
 	color: black;
 	font-family: "Raleway", Verdana;
 }
-h1 {
-	font-size: 100%;
-}
-h3 {
 
-}
 .reference-external {
 	text-decoration: none;
 	color: #fff;
 	font-weight: bold;
 	padding: 1px 15px;
 	background-color: #e4ab28;
+}
+.top-menu-container {
+  background-color: #333;
+  position: fixed;
+	justify-content: center;
+	flex-direction: row;
+  top: 0;
+  width: 100vw;
+	height: 60px;
+	display: flex;
+}
+.top-menu-button-container {
+	display: flex;
+	align-items: center;
+	justify-content: left;
+	padding-left: 10px;
+	width: 100vw;
+}
+.top-menu-button {
+	font-size: 25px;
+	height: 100%;
+	color: #fff;
+	background: transparent;
+	border-width: 0px;
+	padding: 0px 17px;
+	border-radius: 50%;
+	transition: 300ms;
+	cursor: pointer;
+}
+.top-menu-button:hover {
+	background-color: #505050;
+}
+.top-menu-button:active {
+	background-color: #505050;
 }
 .top-menu {
 	-moz-box-shadow:    inset 0 0 10px #000000;
@@ -26,15 +55,19 @@ h3 {
   background-color: #fff;
   position: fixed;
 	justify-content: center;
+	align-items: center;
 	flex-direction: row;
   top: 0;
   width: 100vw;
+	height: 60px;
 	display: flex;
 }
 .top-menu a {
   color: #333;
   text-align: center;
-  padding: 14px 16px;
+  padding: 20px 16px;
+	border-radius: 0px 0px 10px 10px;
+	align-items: center;
   text-decoration: none;
   font-size: 1.2rem;
 }
@@ -64,8 +97,9 @@ h3 {
 	/* background-image: url("https://img.freepik.com/premium-vector/technology-science-vector-background-tech-abstraction-with-hexagons-mesh-electronics-digital-style-3d-dimensional-perspective-abstract-illustration_570429-3156.jpg?w=1800"); */
 }
 .topics {
+	display: flex;
 	width: 75%;
-	background: #333;
+	justify-content: center;
 }
 .image-container {
 	display: flex;
@@ -73,13 +107,16 @@ h3 {
 }
 .profile-picture {
 	border-radius: 50%;
-	width: 30%;
+	width: 150px;
 	height: auto;
 }
 .vertical-line{
 	width: 2px;
 	background-color: #999;
 	height: 130px;
+}
+.info-container {
+	width: 300px;
 }
 .fa {
 	margin-top: 10px;
@@ -95,4 +132,85 @@ h3 {
 .fa-github {
   background: #333;
   color: white;
+}
+.side-menu-container {
+	height: 100vh;
+	width: 70%;
+	top: 0;
+	background-color: #333;
+	position: fixed;
+	overflow: auto;
+	display: none;
+	justify-content: start;
+	flex-direction: column;
+	align-items: center;
+	color: white;
+	transition: 500ms;
+	box-shadow:         5px 5px 5px 1px #0000007F;
+}
+.top-menu-close-button {
+	height: 60px;
+	width: 100%;
+	font-size: 25px;
+	color: #c2c2c2;
+	background: transparent;
+	border-width: 0px;
+	padding: 0px 17px;
+	transition: 300ms;
+	cursor: pointer;
+	margin-bottom: 20px;
+}
+.top-menu-close-button:hover {
+	background-color: #505050;
+}
+.top-menu-close-button:active {
+	background-color: #505050;
+}
+.side-menu-content {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+	gap: 10px;
+}
+.side-menu-navigation-list {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	align-items: start;
+	margin-top: 50px;
+	bottom: 0px;
+	position: absolute;
+}
+.side-menu-navigation-list a {
+	text-decoration: none;
+	color: white;
+	width: 100%;
+	padding: 20px 0px;
+	transition: background-color 300ms;
+}
+.side-menu-navigation-list a:hover {
+	background-color: #fff;
+	color: #333
+}
+.side-menu-navigation-list a:active {
+	background-color: #fff;
+	color: #333
+}
+@media(max-width: 500px){
+  .header {
+    display: none;
+  }
+	.top-menu {
+		display: none;
+	}
+	.profile-picture {
+		border-width: 2px;
+		border-color: #fff;
+		border-style: solid;
+		width: 40%;
+		height: auto;
+	}
 }
