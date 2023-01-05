@@ -81,22 +81,40 @@ p{color: #FFFFFF}
 .project-line-container {
 	display: flex;
 	flex-direction: row;
-	background-color: blueviolet;
+	width: 100%;
+	height: 100%;
 }
 .project-card {
 	border-width: 1px;
 	border-color: #FFFFFF;
 	border-style: solid;
 	width: 45%;
-	max-height: 200px;
+	height: 85%;
   margin: auto;
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 	align-items: center;
 	background-color: pink;
 }
+.project-img-container{
+	height: 40%;
+	width: 100%;
+	background-color: red;
+}
+.project-button-container{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+	height: 60%;
+	background: blue;
+}
 .project-img {
-	background-size: repeat;
+	background-size: inherit;
+	overflow: hidden;
+	max-width: 100%;
+	max-height: 200px;
 }
 button {
   border: none;
@@ -108,6 +126,7 @@ button {
   width: 100%;
   font-size: 18px;
 	transition: 300ms;
+	
 }
 button:hover, a:hover {
   background-color: #000000;
@@ -117,9 +136,9 @@ button:hover, a:hover {
 	width: 100%;
 	height: 100%;
 	display: flex;
-	flex-direction: row;
-	justify-content: center;
+	flex-direction: column;
 	align-items: center;
+	justify-content: center;
 	gap: 2%;
 }
 .social-img-container {
@@ -133,9 +152,8 @@ button:hover, a:hover {
 }
 .social-links-container {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	justify-content: center;
-	height: 100%;
 	gap: 1.5%;
 }
 .fa {
